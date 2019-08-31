@@ -1,0 +1,62 @@
+{
+  "name": "crop-tools",
+  "version": "0.1.0",
+  "description": "Tools for calculating image crops",
+  "keywords": [
+    "cropping",
+    "images"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christianhg/crop-tools.git"
+  },
+  "author": "Christian Hamburger Grøngaard <christianhg@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/christianhg/crop-tools",
+  "bugs": "https://github.com/christianhg/crop-tools/issues",
+  "main": "dist/index.js",
+  "module": "dist/crop-tools.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsdx watch",
+    "dist": "trash dist && npm run prettier-production && npm run test && tsdx build",
+    "test": "trash coverage && tsdx test --coverage",
+    "test-watch": "tsdx test --watchAll",
+    "lint": "tsdx lint",
+    "prettier": "prettier --write \"{**/*,*}.{md,ts}\"",
+    "prettier-production": "prettier --list-different \"{**/*,*}.{md,ts}\"",
+    "prettier-staged": "pretty-quick --staged --pattern \"{**/*,*}.{md,ts}\"",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "box-generator": "^2.0.0",
+    "coveralls": "^3.0.6",
+    "husky": "^3.0.4",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "trash-cli": "^3.0.0",
+    "tsdx": "^0.9.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {
+    "fit-box": "^1.0.2",
+    "place-box": "^1.0.0"
+  }
+}
