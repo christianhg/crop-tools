@@ -3148,10 +3148,10 @@ find-up@^4.0.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-fit-box@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/fit-box/-/fit-box-1.0.2.tgz#aaa9256bb13f734702486c7b533b581ad7d4e318"
-  integrity sha512-ukC4XaUPEpkpnxkwdSbUVWaw/ljwDIvoGSGbrBjZoVuZAKiQtrYVNkwtLnP9sQvxhf+2xq5/jTkk0+hBZs3O3A==
+fit-box@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/fit-box/-/fit-box-1.1.0.tgz#009964da6fbad43a42d46620f8d920a03ccce5e9"
+  integrity sha512-IZjJjjIZhzAnU1wa+2obxF9zv1BMv5KjVj0iSIagGQJcuRS9oH71Srg4wQ0kUKmqtTxP8NaZ1wm1FaNC9o6meA==
 
 flat-cache@^2.0.1:
   version "2.0.1"
@@ -3588,10 +3588,10 @@ humanize-duration@^3.15.3:
   resolved "https://registry.yarnpkg.com/humanize-duration/-/humanize-duration-3.20.1.tgz#e5edf1edcd32ac1e97e71e0e97f02533f664dc45"
   integrity sha512-r2FR5Tkwo482oDmoutbX22KLzmz83UlWD8KgfQuM+EvxxDS10m2tRgHsKU+M6nFxaDU72YCKmLKi3lYB0CPMnw==
 
-husky@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-3.0.4.tgz#10a48ac11ab50859b0939750fa0b4e07ad0bf669"
-  integrity sha512-7Rnt8aJfy+MlV28snmYK7O7vWwtOfeVxV6KhLpUFXlmx5ukQ1nQmNUB7QsAwSgdySB5X+bm7q7JIRgazqBUzKA==
+husky@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-3.0.5.tgz#d7db27c346645a8dc52df02aa534a377ad7925e0"
+  integrity sha512-cKd09Jy9cDyNIvAdN2QQAP/oA21sle4FWXjIMDttailpLAYZuBE7WaPmhrkj+afS8Sj9isghAtFvWSQ0JiwOHg==
   dependencies:
     chalk "^2.4.2"
     cosmiconfig "^5.2.1"
@@ -5773,10 +5773,10 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-place-box@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/place-box/-/place-box-1.0.0.tgz#a1374408a3c3f3701c8eaf0786351c786be19e39"
-  integrity sha512-sL2iDPGZ1jm+P5Fzl5o1fSS9WDHjOgLewn/inmVbahDsqz8S3Cy2owNAJE7IuFCZAt6EyXUkVsfKQOngnw/WMA==
+place-box@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/place-box/-/place-box-1.1.0.tgz#53356fe82e5bf04053d1bcb282fb7fb34bcea858"
+  integrity sha512-FMqNxrobjXsIpFo+eLSL4LZs3slqnKUrYruJlQJwRBehV1C7RRiyZRLVTNHz3F5NFLa4/Txe/qcWoFWLBGmHwg==
 
 please-upgrade-node@^3.2.0:
   version "3.2.0"
