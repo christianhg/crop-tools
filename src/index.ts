@@ -1,5 +1,5 @@
-import { Box, Coordinates, Position, placeBox } from 'place-box';
 import { fitBox } from 'fit-box';
+import { Box, Coordinates, placeBox, Position } from 'place-box';
 
 export type Dimensions = Box;
 
@@ -22,5 +22,25 @@ export function calculateCrop({
   return {
     ...fittedBox,
     ...position,
+  };
+}
+
+export function scaleCrop({
+  imageDimensions,
+  crop,
+}: {
+  imageDimensions: {
+    original: Dimensions;
+    current: Dimensions;
+  };
+  crop: Crop;
+}): Crop {
+  const scale = imageDimensions.current.width / imageDimensions.original.width;
+
+  return {
+    width: crop.width * scale,
+    height: crop.height * scale,
+    left: crop.left * scale,
+    top: crop.top * scale,
   };
 }
