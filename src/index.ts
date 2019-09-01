@@ -9,15 +9,15 @@ export type POI = Coordinates;
 
 export function calculateCrop({
   imageDimensions: boundary,
-  poi,
+  poi: coordinates = { x: boundary.width / 2, y: boundary.height / 2 },
   cropDimensions: box,
 }: {
   imageDimensions: Dimensions;
-  poi: POI;
+  poi?: POI;
   cropDimensions: Dimensions;
 }): Crop {
   const fittedBox = fitBox({ boundary, box });
-  const position = placeBox({ boundary, coordinates: poi, box: fittedBox });
+  const position = placeBox({ boundary, coordinates, box: fittedBox });
 
   return {
     ...fittedBox,

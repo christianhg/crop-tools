@@ -3,6 +3,7 @@ import { createBoxGenerator } from 'box-generator';
 import { randomNumber } from './random-number';
 import { aspectRatio } from './aspect-ratio';
 import { contains } from './contains';
+import { equalFloats } from './equal-floats';
 
 describe(calculateCrop.name, () => {
   it('works', () => {
@@ -21,15 +22,29 @@ describe(calculateCrop.name, () => {
           x: randomNumber({ from: 0, to: imageDimensions.width }),
           y: randomNumber({ from: 0, to: imageDimensions.height }),
         };
-        const crop = calculateCrop({ imageDimensions, poi, cropDimensions });
+        const cropA = calculateCrop({
+          imageDimensions,
+          poi,
+          cropDimensions,
+        });
+        const cropB = calculateCrop({ imageDimensions, cropDimensions });
 
-        expect(aspectRatio(crop).toFixed(2)).toBe(
-          aspectRatio(cropDimensions).toFixed(2)
-        );
+        expect(
+          equalFloats(aspectRatio(cropA), aspectRatio(cropDimensions))
+        ).toBeTruthy();
+        expect(
+          equalFloats(aspectRatio(cropB), aspectRatio(cropDimensions))
+        ).toBeTruthy();
 
-        expect(contains({ boundary: imageDimensions, box: crop })).toBeTruthy();
+        expect(
+          contains({ boundary: imageDimensions, box: cropA })
+        ).toBeTruthy();
+        expect(
+          contains({ boundary: imageDimensions, box: cropB })
+        ).toBeTruthy();
 
-        expect(crop.left === 0 || crop.top === 0).toBeTruthy();
+        expect(cropA.left === 0 || cropA.top === 0).toBeTruthy();
+        expect(cropB.left === 0 || cropB.top === 0).toBeTruthy();
       }
     }
   });
